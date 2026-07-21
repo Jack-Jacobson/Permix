@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "Permix",
+    "vesrion": "1.0.0",
+    "description": "A browser extension to keep security, cookies, and cache in control.",
+    "permissions": [
+        "browsingData",
+        "contentSettings",
+        "activeTab",
+        "tabs"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+
+}
