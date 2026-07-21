@@ -1,0 +1,80 @@
+<!DOCTYPE html> 
+<html lang="en">
+    <head>    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"0>
+        <title>Permix</title>
+        <link rel="stylesheet" href="popup.css">
+    </head>
+    <body>
+        <div class="container">
+            < class="header">
+                <div class="brand">
+                    <div class="logo-shield">P</div>
+                    <div>
+                        <h1>Permix</h1>
+                        <p class="domain-text" id="currentDomain">Detecting Site...</p>
+                    </div>
+                </div>
+                <span class="status-badge" id="status-badge">Active</span>
+            </header>
+
+            <section class="card">
+                <h2 class="section-title">Site Permissions</h2>
+
+                <div class="control-row">
+                    <div class="control-label">
+                        <span>Camera</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleCamera">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="control-row">
+                    <div class="control-label">
+                        <span>Microphone</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleMic">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="control-row">
+                    <div class="control-label">
+                        <span>Location</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleLocation">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+
+                <div class="control-row">
+                    <div class="control-label">
+                        <span>Notifications</span>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" id="toggleNotifications">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+
+            <section class="card">
+                <h2 class="section-title">Data Cleanup</h2>
+                <div class="action-grid">
+                    <button class="btn btn-seconday" id="btnClearCache">Clear Cache</button>
+                    <button class="btn btn-seconday" id="btnClearCookies">Clear Cookies</button>"
+                </div>
+                <button class="btn btn-danger" id="btnClearAll">Purge Site Data</button>
+            </section>
+
+            <div class="toast" id="toast">Action Completed</div>
+        </div>
+
+        <script src="popup.js"></script>
+    </body>
+</html>
