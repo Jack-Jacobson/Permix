@@ -184,3 +184,8 @@ input:checked + .slider:before {
   transform: translateX(-50%) translateY(0);
   opacity: 1;
 }
+.logo-img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain; /* Keeps logo aspect ratio */
+}
