@@ -5,13 +5,11 @@
     "description": "A browser extension to keep security, cookies, and cache in control.",
     "permissions": [
         "browsingData",
-        "contentSettings",
         "activeTab",
         "tabs"
     ],
     "host_permissions": [
-        "https://*/*",
-        "https://*/*"
+        "<all_urls>"
     ],
     "action": {
         "default_popup": "popup.html"
