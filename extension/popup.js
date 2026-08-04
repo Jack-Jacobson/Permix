@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     // Query the current active tab
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
 
-    // Handle internal browser pages safely
     if (!tab || !tab.url || !tab.url.startsWith('http')) {
         currentDomainEl.innerText = 'Internal Page';
         cleanupCard.classList.add('disabled');
@@ -14,10 +13,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const url = new URL(tab.url);
     currentDomainEl.innerText = url.hostname;
-    const primaryUrl = url.origin; // e.g., https://example.com
+    const primaryUrl = url.origin;
 
     // Browser compatibility logic
-    // Firefox requires 'hostnames', Chrome requires 'origins'
     const isFirefox = navigator.userAgent.includes('Firefox');
     const targetSiteOptions = isFirefox 
         ? { "hostnames": [url.hostname] } 
@@ -48,7 +46,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             "indexedDB": true,
             "localStorage": true,
             "serviceWorkers": true,
-            "webSQL": true // Deprecated in modern browsers, but safe to leave for older Chrome versions
+            "webSQL": true 
         }, () => {
             showToast(`All data purged for ${url.hostname}`);
         });
@@ -60,6 +58,5 @@ function showToast(message) {
     if (!toast) return;
     toast.innerText = message;
     toast.classList.add('show');
-    // Hide toast after 2.2 seconds
     setTimeout(() => toast.classList.remove('show'), 2200);
 }

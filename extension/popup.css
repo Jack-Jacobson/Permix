@@ -127,7 +127,7 @@ h1 {
     bottom: 16px;
     left: 50%;
     transform: translateX(-50%) translateY(40px);
-    background: #0f172a; /* Dark toast for contrast against light background */
+    background: #0f172a; 
     color: #f8fafc;
     padding: 8px 16px;
     border-radius: 20px;
